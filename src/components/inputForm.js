@@ -18,7 +18,7 @@ const InputForm = ({setUrl}) => {
             value={value}
             onChange={e => setValue(e.target.value)}
             />
-            <button onClick={handleClick}>Shorten!!!</button>
+          <button onClick={handleClick}>Next</button>
         </div>
     </div>
   )
