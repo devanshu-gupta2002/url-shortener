@@ -76,3 +76,7 @@ Feel free to explore the source code and customize the extension according to yo
 - If you encounter any issues or have suggestions, please open an issue on the [GitHub repository](https://github.com/devanshu-gupta2002/url-shortener).
 
 Happy URL shortening! 🚀
+
+## Preview
+
+![URL Shortener Extension](src\style\url-photo.png)
