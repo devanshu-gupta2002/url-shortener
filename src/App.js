@@ -1,9 +1,13 @@
-import './App.css';
+import './style/App.css';
+import { useState } from 'react';
+import InputForm from './components/inputForm.js';
 
-function App() {
+const App = () => {
+  const [url, setUrl] = useState("")
+  console.log(url)
   return (
     <div className="App">
-      hello world
+      <InputForm setUrl={setUrl} />
     </div>
   );
 }
