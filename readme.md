@@ -37,7 +37,7 @@ To use the URL Shortener Chrome extension, follow these steps:
 
 4. **Enable Developer Mode in Chrome:**
    - Open the Chrome browser.
-   - Go to the Extensions window by clicking on the three vertical dots in the top right corner > More tools > Extensions.
+   - Go to the Extensions window by clicking on the Extensions/Puzzle Icon🧩 > Manage Extensions.
 
 5. **Load Unpacked Extension:**
    - Enable Developer mode (toggle switch in the top right).
