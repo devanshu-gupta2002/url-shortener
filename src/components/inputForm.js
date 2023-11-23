@@ -5,7 +5,6 @@ const InputForm = ({setUrl}) => {
 
   const handleClick = () => {
     setUrl(value)
-    setValue("")
   }
 
   return (
