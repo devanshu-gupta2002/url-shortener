@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Url Shortener",
+  "description": "Quickly shorten URLs",
+  "version": "1.0",
+  "action": {
+    "default_title": "test",
+    "default_popup": "index.html",
+    "default_icon": {
+      "16": "url-shortener.png",
+      "32": "url-shortener.png",
+      "48": "url-shortener.png",
+      "128": "url-shortener.png"
+    }
+  }
+
+}

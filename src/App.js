@@ -9,8 +9,7 @@ const App = () => {
   return (
     <div className="App">
       <InputForm setUrl={setUrl} />
-      {url && <InputResult url={url} />}
-      
+      {url && <InputResult url={url} />}  
     </div>
   );
 }

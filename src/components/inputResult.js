@@ -71,6 +71,7 @@ const InputResult = ({url}) => {
       }
       let apiResponse = await axios(apiCall);
       let link = apiResponse.data;
+      console.log(link)
       setShortLink(link.shortUrl);
     } catch(err) {
       setError(err);
@@ -83,13 +84,13 @@ const InputResult = ({url}) => {
     return <p className="notification">Fetching Short URL</p>
   }
   if(error) {
-    return <p className="notification">Something went wrong</p>
+    return <p className="notification">Enter a valid URL</p>
   }
 
   return(
     <>
-      <div>
-        <h3>Choose your service:</h3>
+      <div className='inputResult'>
+        <h2>Choose your service:</h2>
         <div>
           <button onClick={fetchTiny}>TinyURL</button>
           <button onClick={fetchTly}>T.ly</button>
@@ -97,16 +98,14 @@ const InputResult = ({url}) => {
         </div>
       </div>
       {shortLink && (
-        <div className="result">
-          <p>{shortLink}</p>
-          <CopyToClipboard
-            text={shortLink}
-            onCopy={() => setCopy(true)}
-          >
-            <button className={copy ? "copied" : ""}>Copy to Clipboard</button>
-          </CopyToClipboard>
-        </div>
-      )}
+  <div className="result">
+      <p>{shortLink}
+      <CopyToClipboard text={shortLink} onCopy={() => setCopy(true)}>
+        <button className={copy ? "copied" : ""}>Copy</button>
+      </CopyToClipboard>
+      </p>
+  </div>
+)}
     </>
   )
 }
