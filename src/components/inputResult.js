@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import CopyToClipboard from "react-copy-to-clipboard";
 
 const InputResult = ({url}) => {
