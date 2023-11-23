@@ -79,4 +79,4 @@ Happy URL shortening! 🚀
 
 ## Preview
 
-![URL Shortener Extension](src\style\url-photo.png)
+![URL Shortener Extension](src/style/url-photo.png)
