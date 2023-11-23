@@ -28,12 +28,55 @@ const InputResult = ({url}) => {
     }
   }
 
-  const fetchTly = () => {
-    console.log("Tly")
+  const fetchTly = async () => {
+    try {
+      const apiUrl = 'https://t.ly/api/v1/link/shorten'
+      const apiToken = '0Lde9zM5iKdQDjQKmfJ2tufNwQWV6RzrRIF4mmt8DfelaRpRX2DluAGbrGRG'
+      const requestData = {
+          long_url: url,
+          domain: "https://t.ly/"
+      }
+      const response = await axios.post(apiUrl, requestData, {
+        headers: {
+          Authorization: `Bearer ${apiToken}`,
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+      });
+  
+      setShortLink(response.data.short_url)
+    } catch(err) {
+      setError(err);
+    } finally {
+      setLoading(false);
+    }
   }
 
-  const fetchRebrandly = () => {
-    console.log("Rebrandly")
+  const fetchRebrandly = async() => {
+    try{
+      const headers = {
+        "Content-Type": "application/json",
+        "apikey": "f4bae0bcd569444fabf655d411c946ab"
+      }
+      let endpoint = "https://api.rebrandly.com/v1/links";
+      let linkRequest = {
+        destination: url,
+        domain: { fullName: "rebrand.ly" }
+      }
+      const apiCall = {
+          method: 'post',
+          url: endpoint,
+          data: linkRequest,
+          headers: headers
+      }
+      let apiResponse = await axios(apiCall);
+      let link = apiResponse.data;
+      setShortLink(link.shortUrl);
+    } catch(err) {
+      setError(err);
+    } finally {
+      setLoading(false);
+    }
   }
 
   if(loading) {
