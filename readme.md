@@ -17,7 +17,26 @@ The **URL Shortener** Chrome extension is a simple tool built with React to shor
 
 ## Setup
 
-To use the URL Shortener Chrome extension, follow these steps:
+### System Without npm
+
+If your system doesn't have npm installed, follow these steps:
+
+1. **Clone the Repository:**
+   ```bash
+   git clone git@github.com:devanshu-gupta2002/url-shortener.git
+   ```
+
+2. **Enable Developer Mode in Chrome:**
+   - Open the Chrome browser.
+   - Go to the Extensions window by clicking on the Extensions/Puzzle Icon🧩 > Manage Extensions.
+
+3. **Load Unpacked Extension:**
+   - Enable Developer mode (toggle switch in the top right).
+   - Click on "Load unpacked" and select the `build` directory from the cloned project.
+
+### System With Node.js/npm Installed
+
+If your system has Node.js/npm installed, it is recommended to build the project before following the steps above. Here's how:
 
 1. **Clone the Repository:**
    ```bash

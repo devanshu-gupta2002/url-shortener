@@ -30,6 +30,7 @@ const InputResult = ({url}) => {
 
   const fetchTly = async () => {
     try {
+      setLoading(true);
       const apiUrl = 'https://t.ly/api/v1/link/shorten'
       const apiToken = '0Lde9zM5iKdQDjQKmfJ2tufNwQWV6RzrRIF4mmt8DfelaRpRX2DluAGbrGRG'
       const requestData = {
@@ -54,6 +55,7 @@ const InputResult = ({url}) => {
 
   const fetchRebrandly = async() => {
     try{
+      setLoading(true);
       const headers = {
         "Content-Type": "application/json",
         "apikey": "f4bae0bcd569444fabf655d411c946ab"
