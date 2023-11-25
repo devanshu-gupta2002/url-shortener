@@ -2,6 +2,7 @@ import axios from 'axios'
 import { useState } from "react"
 import CopyToClipboard from "react-copy-to-clipboard";
 
+
 const InputResult = ({url}) => {
   const [shortLink, setShortLink] = useState("")
   const [copy, setCopy] = useState("")
@@ -86,7 +87,7 @@ const InputResult = ({url}) => {
     return <p className="notification">Fetching Short URL</p>
   }
   if(error) {
-    return <p className="notification">Enter a valid URL</p>
+    return <p className="notification">An error occured creating the short url :(</p>
   }
 
   return(
